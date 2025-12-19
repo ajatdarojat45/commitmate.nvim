@@ -43,6 +43,7 @@ Before using CommitMate, you need to authenticate with GitHub Copilot:
 ```lua
 {
   "ajatdarojat45/commitmate.nvim",
+  lazy = false,
   dependencies = {
     "nvim-lua/plenary.nvim",
     "CopilotC-Nvim/CopilotChat.nvim",
