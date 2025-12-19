@@ -1,0 +1,7 @@
+*commitmate.nvim*
+
+CommitMate is an AI-assisted commit message generator.
+
+COMMANDS
+  :CommitMate        Generate commit message
+  :CommitMate ping   Check plugin status
