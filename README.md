@@ -12,10 +12,11 @@ A Neovim plugin that generates AI-powered commit messages following the Commitiz
 
 ## 🎬 Demo
 
-<video src="assets/demo.mp4" controls playsinline muted style="max-width: 100%; border-radius: 8px;"></video>
+Click to watch the full video on GitHub:
 
-If the video doesn't render in your viewer, you can open it directly:
-[Watch the demo (assets/demo.mp4)](assets/demo.mov)
+[![CommitMate demo](assets/demo.gif)](assets/demo.mp4)
+
+If the GIF doesn't load, use the direct link: [assets/demo.mp4](assets/demo.mp4)
 
 ## 📋 Requirements
 
