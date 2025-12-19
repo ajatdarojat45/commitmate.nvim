@@ -2,7 +2,13 @@ local M = {}
 
 local config = {
   open_lazygit = false,
-  ping_message = "CommitMate.nvim is ready 🤝"
+  ping_message = "CommitMate.nvim is ready 🤝",
+  chat_float = true,
+  float_opts = {
+    width = 0.85,
+    height = 0.85,
+    border = "rounded",
+  },
 }
 
 function M.setup(opts) 
@@ -11,6 +17,39 @@ end
 
 function M.say_hello()
   vim.notify(config.ping_message, vim.log.levels.INFO)
+end
+
+-- Open CopilotChat buffer in a floating window
+local function open_copilotchat_float()
+  vim.defer_fn(function()
+    local bufnr = vim.fn.bufnr("copilot-chat")
+    if bufnr == -1 then return end
+
+    -- Close any existing windows showing this buffer
+    for _, w in ipairs(vim.api.nvim_list_wins()) do
+      local wb = vim.api.nvim_win_get_buf(w)
+      if wb == bufnr then
+        pcall(vim.api.nvim_win_close, w, true)
+      end
+    end
+
+    local cols = vim.o.columns
+    local lines = vim.o.lines
+    local width = math.max(20, math.floor(cols * (config.float_opts and config.float_opts.width or 0.85)))
+    local height = math.max(10, math.floor(lines * (config.float_opts and config.float_opts.height or 0.85)))
+    local row = math.max(1, math.floor((lines - height) / 2 - 1))
+    local col = math.max(1, math.floor((cols - width) / 2))
+
+    vim.api.nvim_open_win(bufnr, true, {
+      relative = "editor",
+      row = row,
+      col = col,
+      width = width,
+      height = height,
+      style = "minimal",
+      border = (config.float_opts and config.float_opts.border) or "rounded",
+    })
+  end, 200)
 end
 
 -- Extract commit message from CopilotChat buffer
@@ -169,6 +208,10 @@ function M.generate()
       end, 1500)
     end,
   })
+
+  if config.chat_float then
+    open_copilotchat_float()
+  end
 end
 
 return M
