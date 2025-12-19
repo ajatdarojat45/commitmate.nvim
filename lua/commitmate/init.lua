@@ -5,8 +5,8 @@ local config = {
   ping_message = "CommitMate.nvim is ready 🤝",
   chat_float = true,
   float_opts = {
-    width = 0.85,
-    height = 0.85,
+    width = 0.60,
+    height = 0.60,
     border = "rounded",
   },
 }
