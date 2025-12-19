@@ -213,14 +213,6 @@ Add these to your config for quick access:
 vim.keymap.set("n", "<leader>gc", "<cmd>CommitMate<cr>", { desc = "Generate commit message" })
 ```
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-MIT
-
 ## 🙏 Credits
 
 Built with:
