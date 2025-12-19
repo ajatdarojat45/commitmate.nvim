@@ -10,6 +10,13 @@ A Neovim plugin that generates AI-powered commit messages following the Commitiz
 - ⚙️ Configurable behavior
 - 🎯 Simple command interface
 
+## 🎬 Demo
+
+<video src="assets/demo.mp4" controls playsinline muted style="max-width: 100%; border-radius: 8px;"></video>
+
+If the video doesn't render in your viewer, you can open it directly:
+[Watch the demo (assets/demo.mp4)](assets/demo.mov)
+
 ## 📋 Requirements
 
 - Neovim >= 0.8.0
