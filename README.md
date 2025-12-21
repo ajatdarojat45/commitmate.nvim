@@ -1,10 +1,10 @@
 # CommitMate.nvim 🤝
 
-A Neovim plugin that generates AI-powered commit messages following the Commitizen convention using CopilotChat.
+An AI-assisted commit message generator for Neovim, designed to help you write clear and consistent commit messages directly from your editor.
 
 ## ✨ Features
 
-- 🤖 AI-generated commit messages following Commitizen convention
+- 🤖 AI-generated commit messages following common commit conventions
 - 📋 Automatic clipboard copy
 - 🚀 Optional lazygit integration with auto-paste
 - ⚙️ Configurable behavior
@@ -205,7 +205,7 @@ Add these to your config for quick access:
 {
   "ajatdarojat45/commitmate.nvim",
   keys = {
-    { "<leader>cm", "<cmd>CommitMate<cr>", desc = "Generate commit message" },
+   { "<leader>cm", "<cmd>CommitMate<cr>", desc = "Generate commit message" },
   },
   -- ... rest of config
 }
