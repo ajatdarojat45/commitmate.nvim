@@ -205,13 +205,13 @@ Add these to your config for quick access:
 {
   "ajatdarojat45/commitmate.nvim",
   keys = {
-    { "<leader>gc", "<cmd>CommitMate<cr>", desc = "Generate commit message" },
+    { "<leader>cm", "<cmd>CommitMate<cr>", desc = "Generate commit message" },
   },
   -- ... rest of config
 }
 
 -- Or in your general keymaps
-vim.keymap.set("n", "<leader>gc", "<cmd>CommitMate<cr>", { desc = "Generate commit message" })
+vim.keymap.set("n", "<leader>cm", "<cmd>CommitMate<cr>", { desc = "Generate commit message" })
 ```
 
 ## 🙏 Credits
